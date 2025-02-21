@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PrographyPhotoApp</string>
+    <string name="title">최신이미지</string>
+    <string name="username">UserName</string>
+    <string name="cardtitle">Title</string>
+    <string name="carddescription">decsription\ndescription은 최대 2줄</string>
+    <string name="cardtag">#tag #tag # tag #tag</string>
+</resources>

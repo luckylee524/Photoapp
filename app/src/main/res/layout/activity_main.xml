@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상태바 -->
+    <RelativeLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#FFFFFF"
+        android:layout_alignParentTop="true">
+        <View
+            android:id="@+id/system_dark"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#FFFFFF"/>
+    </RelativeLayout>
+
+    <!-- 네비게이션 바 -->
+    <RelativeLayout
+        android:id="@+id/navigationb"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/status_bar"
+        android:background="#FFFFFF">
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="144dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/prography_logo" />
+    </RelativeLayout>
+
+    <!-- 그리드 레이아웃을 감싸는 스크롤 뷰 -->
+    <ScrollView
+        android:id="@+id/gridScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigationb"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true">
+
+        <!-- 그리드 레이아웃 -->
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="2">
+
+            <!-- 헤더 -->
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="#FFFFFF"
+                android:layout_row="0">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/title"
+                    android:textAppearance="@style/title"
+                    android:gravity="top"/>
+
+            </RelativeLayout>
+
+            <!-- 사진 그리드 -->
+            <GridLayout
+                android:id="@+id/photogridse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="10dp"
+                android:layout_row="1">
+
+                <!-- 사진 아이템들 -->
+                <!-- 여기에 실제로 이미지를 동적으로 추가하면 됩니다 -->
+            </GridLayout>
+        </GridLayout>
+    </ScrollView>
+
+    <!-- 하단 탭 바 -->
+    <RelativeLayout
+        android:id="@+id/tabbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="34dp"
+        android:clipToOutline="true"
+        android:background="#222222">
+        <ImageView
+            android:id="@+id/houseimg"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="94dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/house" />
+
+        <ImageView
+            android:id="@+id/cardsimg"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="94dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/cards"
+            android:alpha="0.4"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/system_ios_"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="#222222">
+    </RelativeLayout>
+</RelativeLayout>
